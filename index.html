@@ -3,14 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GLOSSARY</title>
+    <title>Glosario Bilingüe</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="index.js">
 </head>
 <body>
-    <nav>Glosario bilingue </nav>  
-    <input type="text">
-    <button>Buscar</button>
-    <footer></footer>
+    <nav>Glosario Bilingüe</nav>
+
+    <!-- Contenedor de búsqueda -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar palabra...">
+        <button onclick="filterGlossary()">Buscar</button>
+    </div>
+
+    <!-- Lista de términos del glosario -->
+    <ul id="glossary">
+        <li><strong>Apple</strong>: Manzana</li>
+        <li><strong>House</strong>: Casa</li>
+        <li><strong>Tree</strong>: Árbol</li>
+        <!-- Agrega más términos aquí -->
+    </ul>
+
+    <footer>&copy; 2024 Glosario Bilingüe</footer>
+    <script src="index.js"></script>
 </body>
 </html>

@@ -1,50 +1,92 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F7E7C8; /* Amarillo claro */
+    background-color: #E3F2FD; /* Azul claro */
+    color: #0D47A1; /* Azul oscuro */
 }
 
 nav {
-    background-color: #F7D54F; /* Amarillo dorado */
-    color: #1E88E5; /* Azul oscuro */
-    padding: 15px;
+    background-color: #1565C0; /* Azul fuerte */
+    color: #FFFFFF; /* Blanco */
+    padding: 20px;
     text-align: center;
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor para el input y el botón */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 }
 
 input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    margin: 20px auto;
-    display: block;
-    border: 2px solid #F9A825; /* Naranja suave */
-    border-radius: 5px;
+    width: 70%;
+    padding: 12px;
+    border: 2px solid #42A5F5; /* Azul medio */
+    border-radius: 5px 0 0 5px;
     font-size: 18px;
+    color: #1565C0; /* Azul fuerte */
+    background-color: #E3F2FD;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #1E88E5; /* Azul claro */
 }
 
 button {
-    background-color: #388E3C; /* Verde oscuro */
+    background-color: #1E88E5; /* Azul claro */
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 0 5px 5px 0;
     font-size: 18px;
     cursor: pointer;
-    display: block;
-    margin: 0 auto;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #66BB6A; /* Verde claro */
+    background-color: #1565C0; /* Azul fuerte */
+}
+
+/* Estilos para el glosario */
+#glossary {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+#glossary li {
+    background-color: #E3F2FD;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 4px solid #1E88E5; /* Barra de color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+}
+
+#glossary li strong {
+    color: #1565C0; /* Azul fuerte */
 }
 
 footer {
-    background-color: #F44336; /* Rojo coral */
+    background-color: #0D47A1; /* Azul oscuro */
     padding: 20px;
     text-align: center;
     color: white;
+    font-size: 16px;
     position: fixed;
     width: 100%;
     bottom: 0;
