@@ -1,15 +1,15 @@
-/* Estilos generales */
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #E3F2FD; /* Azul claro */
-    color: #0D47A1; /* Azul oscuro */
+    background-color: #E3F2FD; 
+    color: #05173b; 
 }
 
 nav {
-    background-color: #1565C0; /* Azul fuerte */
-    color: #FFFFFF; /* Blanco */
+    background-color: #05173b; 
+    color: #FFFFFF; 
     padding: 20px;
     text-align: center;
     font-size: 28px;
@@ -17,7 +17,6 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Contenedor para el input y el botón */
 .search-container {
     display: flex;
     justify-content: center;
@@ -28,21 +27,21 @@ nav {
 input[type="text"] {
     width: 70%;
     padding: 12px;
-    border: 2px solid #42A5F5; /* Azul medio */
+    border: 2px solid #05173b;
     border-radius: 5px 0 0 5px;
     font-size: 18px;
-    color: #1565C0; /* Azul fuerte */
+    color: #05173b;
     background-color: #E3F2FD;
     outline: none;
     transition: border-color 0.3s ease;
 }
 
 input[type="text"]:focus {
-    border-color: #1E88E5; /* Azul claro */
+    border-color: #05173b;
 }
 
 button {
-    background-color: #1E88E5; /* Azul claro */
+    background-color: #05173b;
     color: white;
     padding: 12px 24px;
     border: none;
@@ -53,10 +52,9 @@ button {
 }
 
 button:hover {
-    background-color: #1565C0; /* Azul fuerte */
+    background-color: #05173b;
 }
 
-/* Estilos para el glosario */
 #glossary {
     max-width: 600px;
     margin: 0 auto;
@@ -69,7 +67,7 @@ button:hover {
     padding: 15px;
     margin: 10px 0;
     border-radius: 8px;
-    border-left: 4px solid #1E88E5; /* Barra de color */
+    border-left: 4px solid #05173b;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-size: 18px;
     font-weight: 400;
@@ -78,11 +76,11 @@ button:hover {
 }
 
 #glossary li strong {
-    color: #1565C0; /* Azul fuerte */
+    color: #05173b;
 }
 
 footer {
-    background-color: #0D47A1; /* Azul oscuro */
+    background-color: #05173b;
     padding: 20px;
     text-align: center;
     color: white;
@@ -91,3 +89,72 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: red;
+}
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        width: 80%;
+        max-width: 400px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .close-button {
+        float: right;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close-button:hover {
+        color: red;
+    }

@@ -9,19 +9,25 @@
 <body>
     <nav>Glosario Bilingüe</nav>
 
-    <!-- Contenedor de búsqueda -->
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Buscar palabra...">
         <button onclick="filterGlossary()">Buscar</button>
     </div>
 
-    <!-- Lista de términos del glosario -->
     <ul id="glossary">
-        <li><strong>Apple</strong>: Manzana</li>
-        <li><strong>House</strong>: Casa</li>
-        <li><strong>Tree</strong>: Árbol</li>
-        <!-- Agrega más términos aquí -->
+        <li><span onclick="showDefinition('Apple', 'Manzana')"><strong>Apple</strong></span></li>
+        <li><span onclick="showDefinition('House', 'Casa')"><strong>House</strong></span></li>
+        <li><span onclick="showDefinition('Tree', 'Árbol')"><strong>Tree</strong></span></li>
+        <li><span onclick="showDefinition('Hello', 'Hola')"><strong>Hello</strong></span></li>
     </ul>
+
+    <div id="definitionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2 id="modalWord"></h2>
+            <p id="modalDefinition"></p>
+        </div>
+    </div>
 
     <footer>&copy; 2024 Glosario Bilingüe</footer>
     <script src="index.js"></script>

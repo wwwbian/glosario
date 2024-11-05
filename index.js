@@ -4,13 +4,11 @@ function filterGlossary() {
     const terms = glossaryList.querySelectorAll('li');
     let found = false;
 
-    // Elimina cualquier mensaje de "No se encontraron resultados" antes de comenzar
     const existingMessage = document.getElementById('noResultsMessage');
     if (existingMessage) {
         existingMessage.remove();
     }
 
-    // Itera sobre cada término del glosario y muestra solo aquellos que coinciden
     terms.forEach(term => {
         const word = term.textContent.toLowerCase();
         
@@ -22,17 +20,51 @@ function filterGlossary() {
         }
     });
 
-    // Si no se encuentra ningún término, agrega el mensaje de "No se encontraron resultados"
     if (!found && searchTerm !== "") {
         const message = document.createElement('li');
         message.id = 'noResultsMessage';
         message.textContent = 'No se encontraron resultados.';
-        message.style.color = '#f44336'; // Color rojo para el mensaje
+        message.style.color = '#f44336'; 
         message.style.fontWeight = 'bold';
-        message.style.listStyleType = 'none'; // Para evitar el punto de lista
+        message.style.listStyleType = 'none';
         glossaryList.appendChild(message);
     }
 }
 
-// Agrega el evento al input para que filtre en tiempo real
 document.getElementById('searchInput').addEventListener('input', filterGlossary);
+
+function showMeaning(element) {
+    const meaning = element.getAttribute('data-meaning');
+    const word = element.textContent;
+
+    document.getElementById('modalWord').innerText = word;
+    document.getElementById('modalDefinition').innerText = meaning;
+    document.getElementById('definitionModal').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('definitionModal').style.display = 'none';
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById('definitionModal');
+    if (event.target === modal) {
+        closeModal();
+    }
+}
+function showDefinition(word, definition) {
+    document.getElementById('modalWord').innerText = word;
+    document.getElementById('modalDefinition').innerText = definition;
+    document.getElementById('definitionModal').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('definitionModal').style.display = 'none';
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById('definitionModal');
+    if (event.target === modal) {
+        closeModal();
+    }
+}
