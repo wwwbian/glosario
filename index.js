@@ -33,27 +33,13 @@ function filterGlossary() {
 
 document.getElementById('searchInput').addEventListener('input', filterGlossary);
 
-function showMeaning(element) {
-    const meaning = element.getAttribute('data-meaning');
-    const word = element.textContent;
+function showDefinition(element) {
+    const word = element.innerText;
+    const translation = element.getAttribute('data-translation');
+    const definition = element.getAttribute('data-meaning');
 
     document.getElementById('modalWord').innerText = word;
-    document.getElementById('modalDefinition').innerText = meaning;
-    document.getElementById('definitionModal').style.display = 'flex';
-}
-
-function closeModal() {
-    document.getElementById('definitionModal').style.display = 'none';
-}
-
-window.onclick = function(event) {
-    const modal = document.getElementById('definitionModal');
-    if (event.target === modal) {
-        closeModal();
-    }
-}
-function showDefinition(word, definition) {
-    document.getElementById('modalWord').innerText = word;
+    document.getElementById('modalTranslation').innerText = `Traducción: ${translation}`;
     document.getElementById('modalDefinition').innerText = definition;
     document.getElementById('definitionModal').style.display = 'flex';
 }
